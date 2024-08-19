@@ -1,0 +1,620 @@
+@charset utf="8";
+
+:root{
+	--themeRed:#e43a47;
+	--gray:#efefef;
+}
+html{
+	scroll-behavior:smooth;
+}
+
+
+button,body{
+	font-family:Playfair Display;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+p{
+	font-size:14px;
+	line-height:26px;
+}
+.fullContainer{
+	width:100%;
+}
+.container{
+	width:1140px;
+	margin:auto;
+}
+
+.sectionTitle{
+	width:300px;
+	border-bottom: 3px solid var(--themeRed);
+	text-align:center;
+	font-size:2rem;
+	font-weight:200;
+	margin:0 auto 50px;
+	position:relative;
+	padding:10px 0;
+	text-transform: uppercase;
+}
+
+.sectionTitle:after{
+	display:inline-block;
+	content:"";
+	height:15px;
+	width:15px;
+	background-color:var(--themeRed);
+	position:absolute;
+	left:calc(50% - 10px);
+	top:calc(75% - 7px);
+	transform: rotate(45deg) translate(50%, 50%);
+	border: 3px solid #fff;
+}
+section{
+	padding:100px 0;
+	position:relative;
+}
+
+/*home page*/
+header{
+	width:100%;
+	background-color:#fff;
+	position:fixed;
+	z-index:2;
+}
+
+header .container{
+	display:flex;
+	justify-content: space-between;
+}
+
+header .container .logo{
+	padding:15px 0;
+	height:75px;
+}
+header .container .logo img{
+	height:100%
+}
+header nav ul{
+	list-style-type:none;
+}
+header nav ul li{
+	display:inline-block;
+	height:75px;
+	line-height:75px;
+	padding:0 15px;
+	text-decoration:none;
+	text-transform:capitalize;
+	font-size:16px;
+	color:#fff;
+	transition:0.3s;
+}
+
+header nav ul li a:hover{
+	background-color:var(--themeRed);
+}
+
+.banner{
+	min-height:100vh;
+	width:100%;
+	background-image:url("header_background.jpg");
+	background-size:cover;
+	background-attachment:fixed;
+}
+
+.banner h1{
+	margin-top:230px;
+	display: inline-block;
+	font-size:3.5rem;
+	color:#fff;
+	text-shadow:0 0 2px #000;
+	width:50%;
+	line-height:4.2rem;
+	font-weight:100;
+}
+
+.banner h1 span{
+	background-color:var(--themeRed);
+	display:inline-block;
+	line-height: 3.5rem;
+	padding:0 15px;
+	font-weight:600;
+	border-radius:5px;
+}
+
+.banner p{
+	color:#fff;
+	width:50%;
+	text-shadow:0 0 2px #000;
+	margin-top:10px;
+}
+
+.banner button{
+	background-color:var(--themeRed);
+	border:0;
+	outline:none;
+	color:#fff;
+	padding: 10px 15px;
+	margin-top: 20px;
+	font-size:13px;
+	border-radius:3px;
+	font-weight:600;
+}
+/*About section*/
+					
+#aboutSection .cards{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content :space-between;
+	margin-top:50px;
+	position :relative;
+	height :245px;
+				
+}
+#aboutSection .cards > div{
+	width :350px;
+	background-color:var(--gray);
+	padding:35px;
+	color:#444;
+	text-align :center;
+	border-radius:5px;
+	height :215px;
+	border :1px solid #ccc;
+	transition:0.4s;
+	
+}
+
+#aboutSection .cards> div:hover{
+	width :400px;
+	margin-top :20px;
+	border-color:var(--themeRed);
+	padding : 55px;
+	height :auto ;
+}
+#aboutSection .cards > div .title{			    
+	font-size :18px;
+	font-weight:600;
+	text-transform :uppercase;
+}
+#aboutSection .cards> div p{
+	font-size :14px;
+	margin-top :15 px;
+				 
+}
+#aboutSection .cards> div button{
+	border :1px solid var (themeRed);
+	outline :none;
+	padding:7px 15px;
+	margin-top: 15px;
+	font-size:12px;
+	border-radius :3px;
+	cursor :pointer; 
+	transition : 0.3;
+	}
+#aboutSection .card > div:hover button {
+				 
+	background-color:var(--themeRed);
+	color :#fff;
+}
+/*end*/
+/*Program section*/
+.programs{
+	background-color:#e2e2e2;
+}
+
+.programs .boxContainer{
+	display:grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap:50px;
+}
+
+.programs .boxContainer .box {
+	background-color:#fff;
+	text-align:center;
+	padding-bottom:25px;
+	border-radius:5px;
+	box-shadow:0 0 3px #c5c5c5;
+	position:relative;
+	margin-bottom:15px;	
+}
+
+.programs .boxContainer .box .cardImage{
+	width:100%;
+	height:300px;
+	background-position: center;
+	background-size:cover;
+	position: relative;
+	overflow:hidden;
+	border-radius: 5px 5px 0 0;
+}
+
+.programs .boxContainer .box .cardImage:after{
+		width:100%;
+		height:100%;
+		background-position:center;
+		background-size:cover;
+		content:"";
+		position:absolute;
+		left: 0;
+		top:0;
+		filter: grayscale(100%);
+		transition:0.4s;
+}
+
+.programs .boxContainer .box:nth-child(1) .cardImage,
+.programs .boxContainer .box:nth-child(1) .cardImage:after{
+	background-image: url("support.jpg");
+}
+
+.programs .boxContainer .box:nth-child(2) .cardImage,
+.programs .boxContainer .box:nth-child(2) .cardImage:after{
+	background-image: url("small_scale.jpg");
+}
+
+.programs .boxContainer .box:nth-child(3) .cardImage,
+.programs .boxContainer .box:nth-child(3) .cardImage:after{
+	background-image:url("school_meals_programs.jpeg");
+}
+
+.programs .boxContainer .box:nth-child(4) .cardImage,
+.programs .boxContainer .box:nth-child(4) .cardImage:after{
+	background-image:url("foodpackage.jpeg");
+}
+
+.programs .boxContainer .box:hover .cardImage:after{
+	top:100%;
+}
+
+.programs .boxContainer .box .programTitle{
+	font-size:16px;
+	margin-top:15px;
+	font-weight:600;
+	color:#444;
+}
+.programs .boxContainer .box .donationCount{
+	font-size: 13px;
+	font-weight:600;
+	color: #444;
+	margin-top:10px;
+}
+.programs .boxContainer .box .donationCount span{
+	color:var(--themeRed);
+}
+
+.programs .boxContainer .box button{
+	position:absolute;
+	left:50%;
+	background-color:var(--themeRed);
+	color:#fff;
+	transform: translate(-50%);
+	border-radius:60px;
+	padding:7px 15px;
+	border:0;
+	outline:none;
+	cursor:pointer;
+}
+/*end*/
+/*Education section*/
+.education{
+	height:100vh;
+	overflow: hidden;
+	position:relative;
+}
+
+.education .videoPlayer{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:100%;
+	transform : translate(-50%, -50%);
+}
+
+.education .educationContainer{
+	position:absolute;
+	background-color:#00000096;
+	width: 600px;
+	top:35vh;
+	color:#fff;
+	text-shadow: 0 0 3px #000;
+	padding:30px;
+}
+
+.education .educationContainer h3{
+	font-size:35px;
+	font-weight:300;
+}
+
+.education .educationContainer p{
+	font-size:15px;
+	line-height:20px;
+	margin:10px 0 30px;
+}
+
+.education .educationContainer button{
+	background-color:var(--themeRed);
+	border:0;
+	color:#fff;
+	padding:10px 25px;
+	font-weight:bold;
+	font-size:14px;
+	outline: none;
+}
+/*Blog section*/
+#blogSection{
+	box-sizing:border-box;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	padding:40px;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.blogContainer{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 0px;
+	flex-wrap: wrap;
+}
+
+.blogBox {
+	width:350px;
+	background-color:#ffff;
+	border: 1px solid #ececec;
+	margin:20px;
+}
+
+.blogImage{
+	width:100%;
+	height: auto;
+}
+
+.blogImage img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	position: center;
+}
+
+.blogText{
+	padding:30px;
+	display:flex;
+	flex-direction: column;
+}
+
+.blogText span{
+	color: var(--themeRed);
+	font-size:0.9rem;
+}
+
+.blogText blogTitle{
+	font-size:1.3rem;
+	font-weight:500;
+	color:#272727;
+}
+.blogText blogTitle:hover{
+	color:#f3cf3c;
+	transition: all ease 0.3s;
+}
+
+.blogText p{
+	color:#9b9b9b;
+	font-size:15px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	margin: 20px 0;
+}
+
+.blogText a{
+	color: #0f0f0f;
+}
+
+.blogText a:hover{
+	color:var(--themeRed);
+	transition:0.2s;
+}
+
+/*Join us and footer*/
+.join{
+    background-image:url("");
+	color :black
+}
+.join .joinTitle{
+	font-size:40px;
+	font-weight:100;
+}
+.join .joinTitle span{
+	font-weight:800;
+}
+
+.join button {
+  padding :7px 15px;
+  margin-top :20px;
+  border :0 ;
+  outline :none;
+  font-weight :600;
+  font-size :16px;
+  
+
+}
+.join button .joinNow{
+   margin-right :10px;
+   background-color : #424242;
+   color:#fff;
+   
+}
+.join button.adoptBtn{
+   background-color:var(--gray);
+   
+}
+ footer {
+   background-color :#181818;
+   color: #7f7f7f;
+   padding :50px 0;
+   font-size:14px;
+ }
+ 
+ footer .cotainer {
+    display :grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap :50px 
+ }
+ 
+ 
+  footer .title{
+     font-size :20px;
+     font-weight: 600;
+	 text-transform :uppercase;
+	 border-bottom:2px solid ;
+	 margin-bottom : 38px;
+	 padding :0 0 5px 0;
+ }
+footer p{
+   margin-bottom:10px;
+}
+   
+footer .linksContainer ul {
+	list-style-type :none;
+	}
+	
+footer .linksContainer ul li a{
+    text-decoration :none ;
+	color: 7f7f7f ;
+	margin-bottom:10px;
+	display :inline-block;
+   
+}
+
+footer .newsLetterContainer img {
+    height : 40px;
+	margin-bottom :11px;
+}
+
+footer .newsLetterContainer input{
+    background-color:transparent;
+	border :1px solid #7f7f7f;
+	outline:none;
+	padding:10px 15px;
+	width :100;
+	margin-top :10px;
+	color:#ccc;
+	border-radius:30px;
+}	
+
+* {box-sizing: border-box}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:var(--themeRed);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width:300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}	   
+	
+	
+	
+	
